@@ -94,27 +94,27 @@ AUTH_USER_MODEL = 'accounts.User'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
 
 # postgresql configurations
 
-DATABASES = {
-    'default': {
-        'ENGINE': env("ENGINE"),
-        'NAME': 'postgres', 
-        'USER': 'postgres',
-        'PASSWORD': '41148',
-        'HOST': env("HOST"), 
-        'PORT': env("PORT"),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': env("ENGINE"),
+#         'NAME': 'postgres', 
+#         'USER': 'postgres',
+#         'PASSWORD': '41148',
+#         'HOST': env("HOST"), 
+#         'PORT': env("PORT"),
+#     }
+# }
 
 # email configurations
 
@@ -197,6 +197,4 @@ SIMPLE_JWT = {
 
 # cors headers configurations
 
-CORS_ALLOWED_ORIGINS = [  
-    "http://localhost:5173",
-]  
+CORS_ALLOW_ALL_ORIGINS = True 
